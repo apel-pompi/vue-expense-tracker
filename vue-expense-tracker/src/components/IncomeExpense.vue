@@ -1,0 +1,23 @@
+<template>
+    <div class="incomeexpense">
+        <div class="inc-exp-container">
+            <div>
+                <h4>Income</h4>
+                <p id="money-plus" class="money plus"></p>
+            </div>
+            <div>
+                <h4>Expense</h4>
+                <p id="money-minus" class="money minus"></p>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script setup>
+
+</script>
+
+
+<style scoped>
+
+</style>
