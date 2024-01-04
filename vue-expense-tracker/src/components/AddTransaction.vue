@@ -4,7 +4,7 @@
         <form id="form" @submit.prevent="onSubmit">
             <div class="form-control">
             <label for="text">Text</label>
-            <input type="text" id="text" placeholder="Enter text..." v-model="text" />
+            <input type="text" id="text" placeholder="Enter text..."/>
             </div>
             <div class="form-control">
             <label for="amount">Amount</label>
@@ -12,7 +12,7 @@
                 type="text"
                 id="amount"
                 placeholder="Enter amount..."
-                v-model="amount"
+               
             />
             </div>
             <button class="btn">Add transaction</button>
