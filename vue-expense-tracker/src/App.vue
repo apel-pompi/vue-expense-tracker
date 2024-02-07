@@ -3,7 +3,7 @@
   <div class="container">
     <Balance :total="+total"/>
     <IncomeExpense :income="+income" :expense="+expense"/>
-    <TansactionList :transactions="transactions"/>
+    <TansactionList :transactions="transactions" @transactionDeleted="handleTransactionDeleted"/>
     <AddTransaction @transactionSumitted="handleTransactionSubmitted"/>
   </div>
 </template>
@@ -65,6 +65,12 @@ const handleTransactionSubmitted = (transactionData) => {
 //generate unique id
 const generateUniqueId = () => {
   return Math.floor(Math.random() * 1000000);
+}
+
+//Deleted Transaction
+const handleTransactionDeleted = (id)=>{
+  transactions.value = transactions.value.filter((transaction) => transaction.id !== id);
+  toast.error('Transaction Deleted');
 }
 </script>
 
